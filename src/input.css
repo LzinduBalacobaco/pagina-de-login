@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .email-input-container {
+    @apply px-3 py-4 mt-1 rounded outline outline-1 disabled:opacity-35;
+  }
+  .email-input-container-normal {
+    @apply outline-slate-200 focus-within:outline-violet-600 hover:outline-violet-600 disabled:opacity-35;
+  }
+  .email-input-container-invalid {
+    @apply outline-rose-500 focus-within:outline-rose-500 hover:outline-rose-500 disabled:opacity-35;
+  }
+
+  .password-input-container {
+    @apply px-3 py-4 mt-1 rounded flex items-center justify-between gap-3 outline outline-1 disabled:opacity-35;
+  }
+  .password-input-container-normal {
+    @apply outline-slate-200 focus-within:outline-violet-600 hover:outline-violet-600;
+  }
+  .password-input-container-invalid {
+    @apply outline-rose-500 focus-within:outline-rose-500 hover:outline-rose-500;
+  }
+
+}

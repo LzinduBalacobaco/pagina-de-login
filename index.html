@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Login</title>
+  <link rel="stylesheet" href="./src/output.css">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="font-titillium-web h-screen overflow-hidden">
+
+  <div class="w-full flex justify-between">
+    <main class="w-full lg:w-1/2 flex flex-col items-center xl:items-start xl:pl-28 pt-10 bg-slate-50">
+      <div class="w-full max-w-[90%] xs:max-w-96 flex justify-start">
+        <a class="mb-10 xs:mb-28" href="#">
+          <img src="./assets/logo.png">
+        </a>
+      </div>
+      <div class="grid gap-8 max-w-[90%] xs:max-w-96">
+        <div class="grid gap-4 mb-2">
+          <h1 class="text-4xl font-bold text-slate-800">Acesse a plataforma</h1>
+          <h2 class="text-base font-normal text-slate-600">Faça login ou registre-se para começar a construir seus projetos ainda hoje.</h2>
+        </div>
+        <form class="grid gap-4">
+          <div class="grid gap-1">
+            <label class="text-sm font-semibold text-slate-800" for="email">E-mail</label>
+            <div class="email-input-container-normal email-input-container">
+              <input class="w-full text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none" name="email" type="email" placeholder="Digite seu e-mail">
+            </div>
+            <p class="alert-email-invalid text-sm font-normal text-rose-500 hidden">Digite um e-mail válido</p>
+          </div>
+          <div class="grid gap-1">
+            <div class="flex justify-between">
+              <label class="text-sm font-semibold text-slate-800" for="senha">Senha</label>
+              <a class="text-sm font-semibold text-violet-600" href="#">Esqueceu a senha?</a>
+            </div>
+            <div class="password-input-container-normal password-input-container">
+              <input class="password-input w-full text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none" name="senha" type="password" placeholder="Digite sua senha">
+              <div class="flex items-center">
+                <i class="cursor-pointer text-slate-400 text-xl ph ph-eye hidden" onclick="togglePasswordVisibility()"></i>
+                <i class="cursor-pointer text-slate-400 text-xl ph ph-eye-slash" onclick="togglePasswordVisibility()"></i>
+              </div>
+            </div>
+            <p class="alert-password-invalid text-sm font-normal text-rose-500 hidden">Digite uma senha válida</p>
+          </div>
+        </form>
+        <a href="#">
+          <button class="w-full p-4 flex items-center justify-center rounded text-base font-bold bg-violet-600 hover:bg-violet-500 transition-all cursor-pointer text-white" onclick="verifyForm()">Entrar</button>
+        </a>
+        <p class="text-base font-normal text-slate-600">Ainda não tem uma conta? <a class="font-bold text-violet-600 hover:underline" href="#">Inscreva-se</a></p>
+      </div>
+    </main>
+
+    <img class="w-0 md:w-2/5 lg:w-1/2 h-screen object-cover " src="./assets/background.png">
+  </div>
+
+  <script src="src/script.js"></script>
+</body>
+</html>
